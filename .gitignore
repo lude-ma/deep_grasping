@@ -1,3 +1,6 @@
 data/*
 !data/bgNums.mat
 !data/graspModes24.mat
+
+weights/*
+!weights/graspWFinal.mat
