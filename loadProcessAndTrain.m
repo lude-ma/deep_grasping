@@ -1,16 +1,25 @@
-% Set this to the path to your folder containing the Cornell Grasping
-% Dataset (this folder should contain a lot of pcd_* files)
-dataDir = '~/data/rawDataSet';
+clear variables
+close all
+clc
+% Set these to the paths to your folders containing the Cornell Grasping
+% Dataset 
+% (this folder should contain a lot of pcd_* files)
+dataDir = fullfile(pwd, 'data', 'rawDataSet');
+fprintf('I will look for raw data in %s.\n', dataDir);
+% (this folder should contain a lot of pcdb_* files)
+bgDir = fullfile(pwd, 'data', 'bgDataSet');
+fprintf('I will look for background data in %s.\n', bgDir);
 
-% Load the grasping dataset
+%% Load the grasping dataset
 cd loadData/
-[depthFeat, colorFeat, normFeat, classes, inst, accepted, depthMask, colorMask]  = loadAllGraspingDataImYUVNormals('~/data/rawDataSet');
+[depthFeat, colorFeat, normFeat, classes, inst, accepted, depthMask, colorMask]  = loadAllGraspingDataImYUVNormals(dataDir);
 classes = logical(classes);
 
-% Process data, splitting into train/test sets and whitening
+%% Process data, splitting into train/test sets and whitening
 cd ../processData/
 processGraspData
 
+%% Train Network
 cd ../recTraining/
 trainGraspRecMultiSparse
 
