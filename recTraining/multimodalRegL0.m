@@ -25,7 +25,7 @@ for i = 1:numModes
     % Add it to the cost, and set the appropriate gradients for the full
     % weight matrix.
     cost = cost + myCost;
-    grad(:,modes == i) = myGrad;
+    grad(:,modes == i) = gather(myGrad);
 end
 
 
