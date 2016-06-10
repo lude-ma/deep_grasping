@@ -1,2 +1,3 @@
-data/bgDataSet/*
-data/rawDataSet/*
+data/*
+!data/bgNums.mat
+!data/graspModes24.mat
