@@ -5,3 +5,6 @@ data/*
 
 weights/*
 !weights/graspWFinal.mat
+
+*~
+
