@@ -127,6 +127,14 @@ nevertheless useful, is also included where needed, but can be found at:
 
 http://www.mathworks.com/matlabcentral/fileexchange/7465-getkey
 
+
+For loading standard PCD files written with pcl_ros matpcl is used, and can
+be found at
+
+http://de.mathworks.com/matlabcentral/fileexchange/40382-matlab-to-point-cloud-library
+
+for reference.
+
 --- Other codebases: ---
 
 Some of this code, mostly network pre-training, was adapted from code by 
