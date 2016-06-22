@@ -60,6 +60,8 @@ function points = loadpcd(fname)
             case 'DATA'
                 mode = remain;
                 break;
+            case 'VIEWPOINT'
+                continue;
             otherwise
                 warning('unknown field %s\n', field);
         end
