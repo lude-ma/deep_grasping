@@ -7,4 +7,5 @@ weights/*
 !weights/graspWFinal.mat
 
 *~
+*.asv
 
